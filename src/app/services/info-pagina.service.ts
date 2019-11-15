@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { InfoPagina } from '../interfaces/info-pagina.interfaces';
-import { Equipo } from '../interfaces/equipo.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +30,6 @@ export class InfoPaginaService {
         this.http.get('https://angular-html-f8d93.firebaseio.com/equipo.json')
             .subscribe( (resp: any[]) => {
                 this.equipo = resp;
-                console.log(resp);
             });
     }
 }
